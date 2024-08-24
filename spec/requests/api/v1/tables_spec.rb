@@ -13,7 +13,6 @@ RSpec.describe Api::V1::TablesController, type: :request do
     @jwt_token = response.headers['Authorization'].split(' ').last
   end
 
-
   describe "GET /api/v1/tables" do
     it "returns a list of tables" do
       get '/api/v1/tables', headers: { Authorization: "Bearer #{@jwt_token}" }
