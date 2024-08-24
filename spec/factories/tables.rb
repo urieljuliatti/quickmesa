@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+#
 FactoryBot.define do
   factory :table do
     user
-    name { "Table 1" }
+    name { 'Table 1' }
     capacity { 1 }
-    location { "Outside" }
+    location { 'Outside' }
   end
 end
