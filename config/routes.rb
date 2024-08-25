@@ -21,4 +21,5 @@ Rails.application.routes.draw do
       end
     end
   end
+  get 'dashboard', to: 'index#dashboard', as: 'dashboard'
 end
