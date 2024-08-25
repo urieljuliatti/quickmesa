@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+
+  get 'dashboard', to: 'dashboard#index'
+
   namespace :api do
     namespace :v1 do
       resources :tables
@@ -21,5 +24,4 @@ Rails.application.routes.draw do
       end
     end
   end
-  get 'dashboard', to: 'index#dashboard', as: 'dashboard'
 end

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-class Api::V1::DashboardController < ApplicationController
-
+class DashboardController < ApplicationController
   def index
     render json: {
       reservations_today: reservations_today,
@@ -12,7 +11,7 @@ class Api::V1::DashboardController < ApplicationController
       confirmed_reservations: confirmed_reservations,
       canceled_reservations: canceled_reservations,
       occupancy_rate_today: occupancy_rate_today
-    }
+    }, status: :ok
   end
 
   private
