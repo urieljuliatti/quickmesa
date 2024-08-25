@@ -6,7 +6,6 @@ RSpec.describe Api::V1::ReservationsController, type: :request do
   let(:user) { create(:user) }
   let(:table) { create(:table, user: user) }
   let(:reservation) { create(:reservation, user: user, table: table) }
-  let(:headers) { { 'Authorization' => "Bearer #{user.generate_jwt}" } }
 
   before do
     post '/login', params: { user: { email: user.email, password: user.password } }
